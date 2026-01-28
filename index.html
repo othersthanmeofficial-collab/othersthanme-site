@@ -7,7 +7,6 @@
     <meta name="description" content="Other Than Me — metal moderno de Belo Horizonte." />
     <meta name="theme-color" content="#0b0d12" />
 
-    <!-- Ícones / preview -->
     <link rel="icon" href="./assets/favicon.png" />
     <meta property="og:title" content="Other Than Me" />
     <meta property="og:description" content="Ouça agora. Assista agora." />
@@ -19,61 +18,53 @@
 
   <body>
     <main>
-      <!-- HERO -->
       <section class="hero">
-        <div class="hero__bg"></div>
+        <div class="hero__bg" aria-hidden="true">
+          <div class="glow glow--a"></div>
+          <div class="glow glow--b"></div>
+          <div class="glow glow--c"></div>
+        </div>
 
         <div class="hero__content">
-          <img class="logo" src="./assets/logo.png" alt="Other Than Me" />
-
-          <h1>OTHER THAN ME</h1>
-          <p class="tagline">Modern metal from Brazil</p>
-
-          <!-- Redes -->
-          <div class="links">
-            <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank">Spotify</a>
-            <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank">YouTube</a>
-            <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank">Instagram</a>
-            <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank">TikTok</a>
+          <div class="enter enter--1">
+            <img class="logo" src="./assets/logo.png" alt="Other Than Me" />
           </div>
 
-          <!-- Singles / Vídeos -->
-          <div class="videos">
-            <a
-              class="video-card"
-              href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
-              target="_blank"
-            >
+          <div class="enter enter--2">
+            <h1>OTHER THAN ME</h1>
+            <p class="tagline">Modern metal from Brazil</p>
+          </div>
+
+          <div class="enter enter--3 links">
+            <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
+            <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
+            <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
+          </div>
+
+          <div class="enter enter--4 videos">
+            <a class="video-card" href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF" target="_blank" rel="noreferrer">
               ▶ Raise Your Hands (Spotify)
             </a>
-
-            <a
-              class="video-card"
-              href="https://www.youtube.com/watch?v=UCID5LNnYxc"
-              target="_blank"
-            >
+            <a class="video-card" href="https://www.youtube.com/watch?v=UCID5LNnYxc" target="_blank" rel="noreferrer">
               ▶ Doom (YouTube)
             </a>
           </div>
         </div>
       </section>
 
-      <!-- FOTOS -->
       <section class="photos">
         <div class="photos__grid">
-          <img src="./assets/photo-1.jpg" alt="Other Than Me 1" />
-          <img src="./assets/photo-2.jpg" alt="Other Than Me 2" />
-          <img src="./assets/photo-3.jpg" alt="Other Than Me 3" />
-          <img src="./assets/photo-4.jpg" alt="Other Than Me 4" />
+          <img src="./assets/photo-1.jpg" alt="Other Than Me 1" loading="lazy" />
+          <img src="./assets/photo-2.jpg" alt="Other Than Me 2" loading="lazy" />
+          <img src="./assets/photo-3.jpg" alt="Other Than Me 3" loading="lazy" />
+          <img src="./assets/photo-4.jpg" alt="Other Than Me 4" loading="lazy" />
         </div>
       </section>
 
-      <!-- FOOTER -->
       <footer class="footer">
         <p>© <span id="year"></span> Other Than Me</p>
-        <p>
-          <a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
-        </p>
+        <p><a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a></p>
       </footer>
     </main>
 
