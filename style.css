@@ -1,75 +1,195 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Other Than Me</title>
-    <meta name="description" content="Other Than Me — metal moderno de Belo Horizonte." />
-    <meta name="theme-color" content="#0b0d12" />
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #05070b;
+  color: #fff;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
 
-    <link rel="icon" href="./assets/favicon.png" />
-    <meta property="og:title" content="Other Than Me" />
-    <meta property="og:description" content="Ouça agora. Assista agora." />
-    <meta property="og:image" content="./assets/og.jpg" />
-    <meta property="og:type" content="website" />
+/* HERO */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+.hero__bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 450px at 20% 20%, rgba(0, 255, 255, 0.18), transparent 60%),
+    radial-gradient(700px 450px at 80% 30%, rgba(0, 180, 255, 0.18), transparent 60%),
+    linear-gradient(180deg, #05070b, #020308);
+  z-index:0;
+}
 
-  <body>
-    <main>
-      <section class="hero">
-        <div class="hero__bg" aria-hidden="true">
-          <div class="glow glow--a"></div>
-          <div class="glow glow--b"></div>
-          <div class="glow glow--c"></div>
-        </div>
+/* Animated glow layers */
+.glow{
+  position:absolute;
+  width: 720px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(40px);
+  opacity: .75;
+  mix-blend-mode: screen;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,.55), rgba(0,180,255,.18), transparent 62%);
+  animation: floaty 10s ease-in-out infinite;
+}
+.glow--a{ left: -180px; top: -120px; animation-duration: 12s; }
+.glow--b{ right: -220px; top: 20px; animation-duration: 14s; animation-delay: -3s; background: radial-gradient(circle at 30% 30%, rgba(0,220,255,.45), rgba(0,140,255,.16), transparent 62%); }
+.glow--c{ left: 20%; bottom: -220px; animation-duration: 16s; animation-delay: -7s; background: radial-gradient(circle at 30% 30%, rgba(0,255,210,.35), rgba(0,140,255,.14), transparent 62%); }
 
-        <div class="hero__content">
-          <div class="enter enter--1">
-            <img class="logo" src="./assets/logo.png" alt="Other Than Me" />
-          </div>
+@keyframes floaty{
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  33%  { transform: translate3d(40px, -25px, 0) scale(1.02); }
+  66%  { transform: translate3d(-30px, 35px, 0) scale(0.98); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
 
-          <div class="enter enter--2">
-            <h1>OTHER THAN ME</h1>
-            <p class="tagline">Modern metal from Brazil</p>
-          </div>
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .glow{ animation: none; }
+  .enter{ animation: none; opacity:1; transform:none; }
+}
 
-          <div class="enter enter--3 links">
-            <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
-          </div>
+.hero__content{
+  position:relative;
+  z-index:1;
+  padding: 40px 20px;
+  max-width: 900px;
+}
 
-          <div class="enter enter--4 videos">
-            <a class="video-card" href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF" target="_blank" rel="noreferrer">
-              ▶ Raise Your Hands (Spotify)
-            </a>
-            <a class="video-card" href="https://www.youtube.com/watch?v=UCID5LNnYxc" target="_blank" rel="noreferrer">
-              ▶ Doom (YouTube)
-            </a>
-          </div>
-        </div>
-      </section>
+.logo{
+  width: 110px;
+  margin: 0 auto 20px;
+  opacity: .92;
+}
 
-      <section class="photos">
-        <div class="photos__grid">
-          <img src="./assets/photo-1.jpg" alt="Other Than Me 1" loading="lazy" />
-          <img src="./assets/photo-2.jpg" alt="Other Than Me 2" loading="lazy" />
-          <img src="./assets/photo-3.jpg" alt="Other Than Me 3" loading="lazy" />
-          <img src="./assets/photo-4.jpg" alt="Other Than Me 4" loading="lazy" />
-        </div>
-      </section>
+h1{
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: .25em;
+  margin-bottom: 10px;
+}
 
-      <footer class="footer">
-        <p>© <span id="year"></span> Other Than Me</p>
-        <p><a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a></p>
-      </footer>
-    </main>
+.tagline{
+  color: rgba(255,255,255,.6);
+  margin-bottom: 40px;
+  letter-spacing: .2em;
+  font-size: 12px;
+}
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
-</html>
+/* Entrance animation (subtle) */
+.enter{
+  opacity: 0;
+  transform: translateY(10px);
+  animation: enter .8s ease forwards;
+}
+.enter--1{ animation-delay: .05s; }
+.enter--2{ animation-delay: .18s; }
+.enter--3{ animation-delay: .32s; }
+.enter--4{ animation-delay: .45s; }
+
+@keyframes enter{
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Links */
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn{
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,255,.35);
+  background: rgba(0, 200, 255, 0.08);
+  color: #cfffff;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn:hover{
+  background: rgba(0, 220, 255, 0.2);
+  border-color: rgba(0,255,255,.55);
+  transform: translateY(-2px);
+}
+
+/* Video cards */
+.videos{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+  align-items:center;
+}
+
+.video-card{
+  width: min(420px, 90vw);
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,.25);
+  background: rgba(0, 140, 180, 0.08);
+  color: #eaffff;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.video-card:hover{
+  background: rgba(0, 200, 255, 0.2);
+  border-color: rgba(0,255,255,.5);
+  transform: scale(1.02);
+}
+
+/* PHOTOS */
+.photos{
+  padding: 40px 20px 60px;
+  background: #020308;
+}
+
+.photos__grid{
+  max-width: 1100px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.photos__grid img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: .92;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.photos__grid img:hover{
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding: 30px 20px 50px;
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  background: #020308;
+}
+
+.footer a{
+  color: rgba(180, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .photos__grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px){
+  .photos__grid img{ height: 180px; }
+}
