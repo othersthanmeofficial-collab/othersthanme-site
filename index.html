@@ -186,7 +186,6 @@
               <div><a class="link" href="#" target="_blank" rel="noreferrer">Ver</a></div>
             </div>
 
-
             <p class="muted">
               Quer fechar show? <a class="link" href="#contato">Fale com a gente</a>.
             </p>
@@ -199,30 +198,23 @@
         <div class="container">
           <div class="section__head">
             <h2>Mídia</h2>
-            <p>Fotos (carrossel) + Press Kit.</p>
+            <p>Fotos + Press Kit.</p>
           </div>
 
-          <!-- Carrossel -->
-          <div class="carousel" aria-label="Carrossel de fotos da banda">
-            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Voltar fotos">‹</button>
-
-            <div class="carousel__track" id="carouselTrack">
-              <!-- Garanta que esses arquivos existam em /assets/ com esses nomes -->
-              <figure class="carousel__item">
-                <img src="./assets/photo-1.jpg" alt="Other Than Me - foto 1" loading="lazy" />
-              </figure>
-              <figure class="carousel__item">
-                <img src="./assets/photo-2.jpg" alt="Other Than Me - foto 2" loading="lazy" />
-              </figure>
-              <figure class="carousel__item">
-                <img src="./assets/photo-3.jpg" alt="Other Than Me - foto 3" loading="lazy" />
-              </figure>
-              <figure class="carousel__item">
-                <img src="./assets/photo-4.jpg" alt="Other Than Me - foto 4" loading="lazy" />
-              </figure>
-            </div>
-
-            <button class="carousel__btn" type="button" data-dir="1" aria-label="Avançar fotos">›</button>
+          <!-- Galeria (lado a lado, compacta) -->
+          <div class="gallery" aria-label="Galeria de fotos da banda">
+            <figure class="gallery__item">
+              <img src="./assets/photo-1.jpg" alt="Other Than Me - foto 1" loading="lazy" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./assets/photo-2.jpg" alt="Other Than Me - foto 2" loading="lazy" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./assets/photo-3.jpg" alt="Other Than Me - foto 3" loading="lazy" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./assets/photo-4.jpg" alt="Other Than Me - foto 4" loading="lazy" />
+            </figure>
           </div>
 
           <div id="presskit" class="presskit">
@@ -282,22 +274,6 @@
     <script>
       // ano
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // carrossel (scroll horizontal)
-      const track = document.getElementById("carouselTrack");
-      const buttons = document.querySelectorAll(".carousel__btn");
-
-      function scrollCarousel(dir) {
-        const item = track.querySelector(".carousel__item");
-        const gap = 12;
-        const step = (item?.clientWidth || 320) + gap;
-        track.scrollBy({ left: dir * step, behavior: "smooth" });
-      }
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => scrollCarousel(Number(btn.dataset.dir)));
-      });
     </script>
   </body>
-</htm
-
+</html>
