@@ -1,15 +1,19 @@
+<!-- index.html -->
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" data-lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Others Than Me</title>
-    <meta name="description" content="Others Than Me — modern metal from Brazil." />
-    <meta name="theme-color" content="#0b0d12" />
+    <meta
+      name="description"
+      content="Others Than Me — metal moderno de Belo Horizonte. Ouça no Spotify, assista no YouTube e veja fotos ao vivo."
+    />
+    <meta name="theme-color" content="#071217" />
 
     <link rel="icon" href="./assets/favicon.png" />
     <meta property="og:title" content="Others Than Me" />
-    <meta property="og:description" content="Listen now. Watch now." />
+    <meta property="og:description" content="Modern metal from Brazil — built for the stage." />
     <meta property="og:image" content="./assets/og.jpg" />
     <meta property="og:type" content="website" />
 
@@ -17,158 +21,289 @@
   </head>
 
   <body>
-    <main>
+    <!-- background lights -->
+    <div class="bg" aria-hidden="true">
+      <div class="bg__noise"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__glow bg__glow--c"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="Others Than Me">
+          <img class="brand__logo" src="./assets/logo.png" alt="Logo Others Than Me" />
+          <span class="brand__name">Others Than Me</span>
+        </a>
+
+        <div class="topbar__actions">
+          <button class="lang" id="langToggle" type="button" aria-label="Trocar idioma">
+            <span class="lang__pill" data-active="pt">PT</span>
+            <span class="lang__pill" data-active="en">EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
       <!-- HERO -->
       <section class="hero">
-        <div class="hero__bg" aria-hidden="true">
-          <div class="glow glow--a"></div>
-          <div class="glow glow--b"></div>
-          <div class="glow glow--c"></div>
-        </div>
-
-        <!-- Language switch -->
-        <div class="lang" role="navigation" aria-label="Seleção de idioma">
-          <button class="lang__btn" type="button" data-lang="pt" aria-pressed="false">PT</button>
-          <span class="lang__sep" aria-hidden="true">/</span>
-          <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-
-        <div class="hero__content">
-          <div class="enter enter--1">
-            <img class="logo" src="./assets/logo.png" alt="Others Than Me (logo)" />
+        <div class="container hero__inner">
+          <div class="hero__logoWrap">
+            <img class="hero__logo" src="./assets/logo.png" alt="Logo Others Than Me" />
           </div>
 
-          <div class="enter enter--2">
-            <h1 id="bandName">OTHERS THAN ME</h1>
-            <p class="tagline" data-i18n="tagline">Modern metal from Brazil</p>
+          <h1 class="hero__title" data-i18n="title">OTHERS THAN ME</h1>
+          <p class="hero__subtitle" data-i18n="subtitle">Metal moderno de Belo Horizonte, Brasil</p>
+
+          <p class="hero__copy" data-i18n="copy">
+            Não é só uma banda pra você ouvir — é uma banda pra você viver. Energia, atmosfera e emoção no volume máximo.
+          </p>
+
+          <div class="hero__chips" aria-label="Redes sociais">
+            <a class="chip" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
+            <a class="chip" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
+            <a class="chip" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="chip" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
           </div>
 
-          <p class="microcopy enter enter--3" data-i18n="follow">Follow us</p>
-
-          <!-- Social links -->
-          <div class="links enter enter--3">
-            <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
-          </div>
-
-          <p class="microcopy enter enter--4" data-i18n="listen">Listen now</p>
-
-          <!-- Releases / videos -->
-          <div class="videos enter enter--4">
+          <div class="hero__cta">
             <a
-              class="video-card"
-              href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
+              class="btn btn--primary"
+              href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF?si=ac37f24b14144928"
               target="_blank"
               rel="noreferrer"
-            >
-              ▶ <span data-i18n="cta_raise">Raise Your Hands (Spotify)</span>
-            </a>
+              data-i18n="ctaSpotify"
+            >▶ Raise Your Hands (Spotify)</a>
 
             <a
-              class="video-card"
+              class="btn"
               href="https://www.youtube.com/watch?v=UCID5LNnYxc"
               target="_blank"
               rel="noreferrer"
-            >
-              ▶ <span data-i18n="cta_doom">Doom (YouTube)</span>
+              data-i18n="ctaDoom"
+            >▶ Doom (YouTube)</a>
+          </div>
+
+          <div class="hero__meta">
+            <a class="metaLink" href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
+            <span class="dotSep">•</span>
+            <a class="metaLink" href="#media" data-i18n="skipToMedia">Ver fotos</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE / ABOUT (fan-first, curto) -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title" data-i18n="liveTitle">Uma experiência ao vivo</h2>
+            <p class="section__desc" data-i18n="liveDesc">
+              Cada show é construído pra ser intenso, emocional e inesquecível. É no palco que a nossa música ganha vida.
+            </p>
+          </div>
+
+          <div class="mini">
+            <div class="mini__card">
+              <h3 data-i18n="mini1Title">Lema</h3>
+              <p data-i18n="mini1Desc">
+                “Existem outros além de mim que sonham, que sofrem, que lutam, que sorriem — mostrar que não estamos sozinhos.”
+              </p>
+            </div>
+
+            <div class="mini__card">
+              <h3 data-i18n="mini2Title">Som</h3>
+              <p data-i18n="mini2Desc">
+                Metal moderno e atmosférico, com peso e refrões que ficam na cabeça.
+              </p>
+            </div>
+
+            <div class="mini__card">
+              <h3 data-i18n="mini3Title">Influências</h3>
+              <p data-i18n="mini3Desc">Bring Me The Horizon • Architects • Loathe</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEDIA GRID -->
+      <section id="media" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title" data-i18n="mediaTitle">Fotos</h2>
+            <p class="section__desc" data-i18n="mediaDesc">Momentos ao vivo e estética da banda.</p>
+          </div>
+
+          <div class="gallery" aria-label="Galeria de fotos">
+            <!-- 11 fotos -->
+            <a class="gallery__item" href="./assets/gallery/gallery-01.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-01.jpg" alt="Others Than Me - foto 1" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-02.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-02.jpg" alt="Others Than Me - foto 2" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-03.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-03.jpg" alt="Others Than Me - foto 3" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-04.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-04.jpg" alt="Others Than Me - foto 4" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-05.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-05.jpg" alt="Others Than Me - foto 5" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-06.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-06.jpg" alt="Others Than Me - foto 6" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-07.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-07.jpg" alt="Others Than Me - foto 7" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-08.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-08.jpg" alt="Others Than Me - foto 8" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-09.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-09.jpg" alt="Others Than Me - foto 9" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-10.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-10.jpg" alt="Others Than Me - foto 10" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="./assets/gallery/gallery-11.jpg" target="_blank" rel="noreferrer">
+              <img src="./assets/gallery/gallery-11.jpg" alt="Others Than Me - foto 11" loading="lazy" />
+            </a>
+          </div>
+
+          <div class="mediaActions">
+            <a class="btn btn--ghost" href="./assets/presskit.pdf" target="_blank" rel="noreferrer" data-i18n="pressBtn">
+              Press Kit (PDF)
             </a>
           </div>
         </div>
       </section>
 
-      <!-- PHOTOS -->
-      <section class="photos" aria-label="Fotos da banda">
-        <div class="photos__inner">
-          <p class="photos__label" data-i18n="photos">Photos</p>
-
-          <div class="photos__grid">
-            <img src="./assets/photo-1.jpg" alt="Others Than Me - photo 1" loading="lazy" />
-            <img src="./assets/photo-2.jpg" alt="Others Than Me - photo 2" loading="lazy" />
-            <img src="./assets/photo-3.jpg" alt="Others Than Me - photo 3" loading="lazy" />
-            <img src="./assets/photo-4.jpg" alt="Others Than Me - photo 4" loading="lazy" />
+      <!-- CONTACT -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title" data-i18n="contactTitle">Contato</h2>
+            <p class="section__desc" data-i18n="contactDesc">Shows, imprensa e parcerias.</p>
           </div>
+
+          <div class="contact">
+            <a class="contact__card" href="mailto:contato@othersthanme.com.br">
+              <div class="contact__label" data-i18n="emailLabel">E-mail</div>
+              <div class="contact__value">contato@othersthanme.com.br</div>
+              <div class="contact__hint" data-i18n="emailHint">Clique para enviar</div>
+            </a>
+
+            <div class="contact__card contact__card--small">
+              <div class="contact__label" data-i18n="followLabel">Siga</div>
+              <div class="contact__stack">
+                <a class="miniLink" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
+                <a class="miniLink" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
+                <a class="miniLink" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
+                <a class="miniLink" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <p>© <span id="year"></span> Others Than Me</p>
+          </footer>
         </div>
       </section>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <p>© <span id="year"></span> Others Than Me</p>
-        <p><a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a></p>
-      </footer>
     </main>
 
     <script>
-      // ---- i18n dictionary ----
-      const I18N = {
-        pt: {
-          htmlLang: "pt-br",
-          tagline: "Metal moderno do Brasil",
-          follow: "Siga a banda",
-          listen: "Ouça agora",
-          cta_raise: "Raise Your Hands (Spotify)",
-          cta_doom: "Doom (YouTube)",
-          photos: "Fotos",
-          ogDescription: "Ouça agora. Assista agora."
-        },
-        en: {
-          htmlLang: "en",
-          tagline: "Modern metal from Brazil",
-          follow: "Follow us",
-          listen: "Listen now",
-          cta_raise: "Raise Your Hands (Spotify)",
-          cta_doom: "Doom (YouTube)",
-          photos: "Photos",
-          ogDescription: "Listen now. Watch now."
-        }
-      };
-
-      const STORAGE_KEY = "otm_lang";
-
-      function getPreferredLang() {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === "pt" || saved === "en") return saved;
-        const nav = (navigator.language || "en").toLowerCase();
-        return nav.startsWith("pt") ? "pt" : "en";
-      }
-
-      function setPressed(lang) {
-        document.querySelectorAll(".lang__btn").forEach((b) => {
-          b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
-        });
-      }
-
-      function applyLang(lang) {
-        const dict = I18N[lang] || I18N.en;
-
-        // html lang
-        document.documentElement.lang = dict.htmlLang;
-
-        // text nodes
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.getAttribute("data-i18n");
-          if (dict[key]) el.textContent = dict[key];
-        });
-
-        // meta og description (small polish)
-        const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", dict.ogDescription);
-
-        setPressed(lang);
-        localStorage.setItem(STORAGE_KEY, lang);
-      }
-
-      // events
-      document.querySelectorAll(".lang__btn").forEach((btn) => {
-        btn.addEventListener("click", () => applyLang(btn.dataset.lang));
-      });
-
       // year
       document.getElementById("year").textContent = new Date().getFullYear();
 
+      // i18n dictionary
+      const STRINGS = {
+        pt: {
+          title: "OTHERS THAN ME",
+          subtitle: "Metal moderno de Belo Horizonte, Brasil",
+          copy:
+            "Não é só uma banda pra você ouvir — é uma banda pra você viver. Energia, atmosfera e emoção no volume máximo.",
+          ctaSpotify: "▶ Raise Your Hands (Spotify)",
+          ctaDoom: "▶ Doom (YouTube)",
+          skipToMedia: "Ver fotos",
+          liveTitle: "Uma experiência ao vivo",
+          liveDesc:
+            "Cada show é construído pra ser intenso, emocional e inesquecível. É no palco que a nossa música ganha vida.",
+          mini1Title: "Lema",
+          mini1Desc:
+            "“Existem outros além de mim que sonham, que sofrem, que lutam, que sorriem — mostrar que não estamos sozinhos.”",
+          mini2Title: "Som",
+          mini2Desc: "Metal moderno e atmosférico, com peso e refrões que ficam na cabeça.",
+          mini3Title: "Influências",
+          mini3Desc: "Bring Me The Horizon • Architects • Loathe",
+          mediaTitle: "Fotos",
+          mediaDesc: "Momentos ao vivo e estética da banda.",
+          pressBtn: "Press Kit (PDF)",
+          contactTitle: "Contato",
+          contactDesc: "Shows, imprensa e parcerias.",
+          emailLabel: "E-mail",
+          emailHint: "Clique para enviar",
+          followLabel: "Siga",
+        },
+        en: {
+          title: "OTHERS THAN ME",
+          subtitle: "Modern metal from Belo Horizonte, Brazil",
+          copy:
+            "Not just a band to listen to — a band to experience. Energy, atmosphere and emotion at full volume.",
+          ctaSpotify: "▶ Raise Your Hands (Spotify)",
+          ctaDoom: "▶ Doom (YouTube)",
+          skipToMedia: "See photos",
+          liveTitle: "A live experience",
+          liveDesc:
+            "Every show is built to feel intense, emotional and unforgettable. This is where our music comes alive.",
+          mini1Title: "Motto",
+          mini1Desc:
+            "“There are others beyond me who dream, suffer, fight and smile — to show we’re not alone.”",
+          mini2Title: "Sound",
+          mini2Desc: "Modern, atmospheric metal with heavy riffs and big hooks.",
+          mini3Title: "Influences",
+          mini3Desc: "Bring Me The Horizon • Architects • Loathe",
+          mediaTitle: "Photos",
+          mediaDesc: "Live moments and the band’s aesthetic.",
+          pressBtn: "Press Kit (PDF)",
+          contactTitle: "Contact",
+          contactDesc: "Booking, press and partnerships.",
+          emailLabel: "Email",
+          emailHint: "Click to send",
+          followLabel: "Follow",
+        },
+      };
+
+      const root = document.documentElement;
+      const toggle = document.getElementById("langToggle");
+
+      function applyLang(lang) {
+        root.setAttribute("lang", lang === "pt" ? "pt-BR" : "en");
+        root.dataset.lang = lang;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (STRINGS[lang]?.[key]) el.textContent = STRINGS[lang][key];
+        });
+
+        // set active pill
+        toggle.querySelectorAll(".lang__pill").forEach((pill) => {
+          pill.classList.toggle("is-active", pill.dataset.active === lang);
+        });
+
+        // persist
+        localStorage.setItem("otm_lang", lang);
+      }
+
       // init
-      applyLang(getPreferredLang());
+      const saved = localStorage.getItem("otm_lang");
+      applyLang(saved === "en" ? "en" : "pt");
+
+      // toggle click
+      toggle.addEventListener("click", () => {
+        const current = root.dataset.lang === "en" ? "en" : "pt";
+        applyLang(current === "pt" ? "en" : "pt");
+      });
     </script>
   </body>
 </html>
