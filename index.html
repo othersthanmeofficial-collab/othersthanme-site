@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Others Than Me</title>
-    <meta name="description" content="Others Than Me — metal moderno de Belo Horizonte." />
+    <meta name="description" content="Others Than Me — modern metal from Brazil." />
     <meta name="theme-color" content="#0b0d12" />
 
     <link rel="icon" href="./assets/favicon.png" />
-    <meta property="og:title" content="Other Than Me" />
-    <meta property="og:description" content="Ouça agora. Assista agora." />
+    <meta property="og:title" content="Others Than Me" />
+    <meta property="og:description" content="Listen now. Watch now." />
     <meta property="og:image" content="./assets/og.jpg" />
     <meta property="og:type" content="website" />
 
@@ -18,6 +18,7 @@
 
   <body>
     <main>
+      <!-- HERO -->
       <section class="hero">
         <div class="hero__bg" aria-hidden="true">
           <div class="glow glow--a"></div>
@@ -25,43 +26,73 @@
           <div class="glow glow--c"></div>
         </div>
 
+        <!-- Language switch -->
+        <div class="lang" role="navigation" aria-label="Seleção de idioma">
+          <button class="lang__btn" type="button" data-lang="pt" aria-pressed="false">PT</button>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
         <div class="hero__content">
           <div class="enter enter--1">
-            <img class="logo" src="./assets/logo.png" alt="Others Than Me" />
+            <img class="logo" src="./assets/logo.png" alt="Others Than Me (logo)" />
           </div>
 
           <div class="enter enter--2">
-            <h1>OTHERS THAN ME</h1>
-            <p class="tagline">Modern metal from Brazil</p>
+            <h1 id="bandName">OTHERS THAN ME</h1>
+            <p class="tagline" data-i18n="tagline">Modern metal from Brazil</p>
           </div>
 
-          <div class="enter enter--3 links">
+          <p class="microcopy enter enter--3" data-i18n="follow">Follow us</p>
+
+          <!-- Social links -->
+          <div class="links enter enter--3">
             <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
             <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
             <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
             <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
           </div>
 
-          <div class="enter enter--4 videos">
-            <a class="video-card" href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF" target="_blank" rel="noreferrer">
-              ▶ Raise Your Hands (Spotify)
+          <p class="microcopy enter enter--4" data-i18n="listen">Listen now</p>
+
+          <!-- Releases / videos -->
+          <div class="videos enter enter--4">
+            <a
+              class="video-card"
+              href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ▶ <span data-i18n="cta_raise">Raise Your Hands (Spotify)</span>
             </a>
-            <a class="video-card" href="https://www.youtube.com/watch?v=UCID5LNnYxc" target="_blank" rel="noreferrer">
-              ▶ Doom (YouTube)
+
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=UCID5LNnYxc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ▶ <span data-i18n="cta_doom">Doom (YouTube)</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="photos">
-        <div class="photos__grid">
-          <img src="./assets/photo-1.jpg" alt="Others Than Me 1" loading="lazy" />
-          <img src="./assets/photo-2.jpg" alt="Others Than Me 2" loading="lazy" />
-          <img src="./assets/photo-3.jpg" alt="Others Than Me 3" loading="lazy" />
-          <img src="./assets/photo-4.jpg" alt="Others Than Me 4" loading="lazy" />
+      <!-- PHOTOS -->
+      <section class="photos" aria-label="Fotos da banda">
+        <div class="photos__inner">
+          <p class="photos__label" data-i18n="photos">Photos</p>
+
+          <div class="photos__grid">
+            <img src="./assets/photo-1.jpg" alt="Others Than Me - photo 1" loading="lazy" />
+            <img src="./assets/photo-2.jpg" alt="Others Than Me - photo 2" loading="lazy" />
+            <img src="./assets/photo-3.jpg" alt="Others Than Me - photo 3" loading="lazy" />
+            <img src="./assets/photo-4.jpg" alt="Others Than Me - photo 4" loading="lazy" />
+          </div>
         </div>
       </section>
 
+      <!-- FOOTER -->
       <footer class="footer">
         <p>© <span id="year"></span> Others Than Me</p>
         <p><a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a></p>
@@ -69,9 +100,75 @@
     </main>
 
     <script>
+      // ---- i18n dictionary ----
+      const I18N = {
+        pt: {
+          htmlLang: "pt-br",
+          tagline: "Metal moderno do Brasil",
+          follow: "Siga a banda",
+          listen: "Ouça agora",
+          cta_raise: "Raise Your Hands (Spotify)",
+          cta_doom: "Doom (YouTube)",
+          photos: "Fotos",
+          ogDescription: "Ouça agora. Assista agora."
+        },
+        en: {
+          htmlLang: "en",
+          tagline: "Modern metal from Brazil",
+          follow: "Follow us",
+          listen: "Listen now",
+          cta_raise: "Raise Your Hands (Spotify)",
+          cta_doom: "Doom (YouTube)",
+          photos: "Photos",
+          ogDescription: "Listen now. Watch now."
+        }
+      };
+
+      const STORAGE_KEY = "otm_lang";
+
+      function getPreferredLang() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === "pt" || saved === "en") return saved;
+        const nav = (navigator.language || "en").toLowerCase();
+        return nav.startsWith("pt") ? "pt" : "en";
+      }
+
+      function setPressed(lang) {
+        document.querySelectorAll(".lang__btn").forEach((b) => {
+          b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+        });
+      }
+
+      function applyLang(lang) {
+        const dict = I18N[lang] || I18N.en;
+
+        // html lang
+        document.documentElement.lang = dict.htmlLang;
+
+        // text nodes
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) el.textContent = dict[key];
+        });
+
+        // meta og description (small polish)
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", dict.ogDescription);
+
+        setPressed(lang);
+        localStorage.setItem(STORAGE_KEY, lang);
+      }
+
+      // events
+      document.querySelectorAll(".lang__btn").forEach((btn) => {
+        btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+      });
+
+      // year
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // init
+      applyLang(getPreferredLang());
     </script>
   </body>
 </html>
-
-
