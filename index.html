@@ -13,7 +13,7 @@
     <!-- Ícones / preview -->
     <link rel="icon" href="./assets/favicon.png" />
     <meta property="og:title" content="Other Than Me" />
-    <meta property="og:description" content="Ouça e assista ao último lançamento, confira agenda e contato." />
+    <meta property="og:description" content="Ouça e assista, confira agenda e contato." />
     <meta property="og:image" content="./assets/og.jpg" />
     <meta property="og:type" content="website" />
 
@@ -82,17 +82,34 @@
               </div>
 
               <div class="card__body">
-                <h2 class="card__title">Destaque no YouTube</h2>
-                <p class="card__subtitle">“Doom” • Videoclipe</p>
+                <h2 class="card__title">Último single</h2>
+                <p class="card__subtitle">“Raise Your Hands”</p>
 
                 <div class="quicklinks">
-                  <a class="btn btn--small" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
-                  <a class="btn btn--small btn--ghost" href="https://www.youtube.com/watch?v=UCID5LNnYxc" target="_blank" rel="noreferrer">YouTube</a>
-                  <a class="btn btn--small btn--ghost" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
+                  <a
+                    class="btn btn--small"
+                    href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Spotify</a>
+
+                  <a
+                    class="btn btn--small btn--ghost"
+                    href="https://www.instagram.com/othersthanme/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Instagram</a>
+
+                  <a
+                    class="btn btn--small btn--ghost"
+                    href="https://www.youtube.com/@OthersThanMe"
+                    target="_blank"
+                    rel="noreferrer"
+                  >YouTube</a>
                 </div>
 
                 <div class="note">
-                  <strong>Dica:</strong> quando você tiver o link do “Doom” no Spotify (faixa), eu troco o embed de artista pelo embed do single.
+                  <strong>Raise Your Hands</strong> já disponível no Spotify.
                 </div>
               </div>
             </div>
@@ -107,7 +124,7 @@
         <div class="container">
           <div class="section__head">
             <h2>Ouça e assista</h2>
-            <p>Spotify (artista) e YouTube (“Doom”).</p>
+            <p>Single “Raise Your Hands” no Spotify e videoclipe “Doom” no YouTube.</p>
           </div>
 
           <div class="grid-2">
@@ -116,13 +133,13 @@
               <div class="embed">
                 <iframe
                   style="border-radius: 14px"
-                  src="https://open.spotify.com/embed/artist/3IhWtVUAijb2B76wINGX7t?utm_source=generator"
+                  src="https://open.spotify.com/embed/track/0pCtH5dysx40za6HesDVGF?utm_source=generator"
                   width="100%"
-                  height="352"
+                  height="152"
                   frameborder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
-                  title="Spotify Artist Embed"
+                  title="Raise Your Hands - Other Than Me"
                 ></iframe>
               </div>
             </article>
@@ -134,7 +151,7 @@
                   width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/UCID5LNnYxc"
-                  title="YouTube video player"
+                  title="Doom - Other Than Me"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
@@ -163,18 +180,12 @@
             </div>
 
             <div class="row">
-              <div><strong>DD/MM/AAAA</strong></div>
+              <div><strong>Em breve</strong></div>
               <div>Belo Horizonte, MG</div>
-              <div>Nome do evento • Nome da casa</div>
+              <div>Em breve</div>
               <div><a class="link" href="#" target="_blank" rel="noreferrer">Ver</a></div>
             </div>
 
-            <div class="row">
-              <div><strong>DD/MM/AAAA</strong></div>
-              <div>São Paulo, SP</div>
-              <div>Nome do evento • Nome da casa</div>
-              <div><a class="link" href="#" target="_blank" rel="noreferrer">Ver</a></div>
-            </div>
 
             <p class="muted">
               Quer fechar show? <a class="link" href="#contato">Fale com a gente</a>.
@@ -196,7 +207,7 @@
             <button class="carousel__btn" type="button" data-dir="-1" aria-label="Voltar fotos">‹</button>
 
             <div class="carousel__track" id="carouselTrack">
-              <!-- Troque as fotos dentro de /assets/ e mantenha os nomes -->
+              <!-- Garanta que esses arquivos existam em /assets/ com esses nomes -->
               <figure class="carousel__item">
                 <img src="./assets/photo-1.jpg" alt="Other Than Me - foto 1" loading="lazy" />
               </figure>
@@ -217,12 +228,9 @@
           <div id="presskit" class="presskit">
             <div class="presskit__text">
               <h3>Press Kit (EPK)</h3>
-              <p>
-                Bio curta, logos, fotos em alta e contato. Você pode colocar um PDF no GitHub também (em <code>/assets</code>)
-                e linkar aqui.
-              </p>
             </div>
             <div class="presskit__actions">
+              <!-- Quando tiver o PDF, coloque em /assets/ e aponte o href, ex: ./assets/epk.pdf -->
               <a class="btn" href="#" target="_blank" rel="noreferrer">Baixar PDF</a>
               <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Link do EPK</a>
             </div>
@@ -247,10 +255,6 @@
                 <div>
                   <span class="label">E-mail</span>
                   <a class="link" href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
-                </div>
-                <div>
-                  <span class="label">WhatsApp</span>
-                  <a class="link" href="https://wa.me/55DDDNUMERO" target="_blank" rel="noreferrer">wa.me/55DDDNUMERO</a>
                 </div>
               </div>
             </div>
@@ -295,4 +299,4 @@
       });
     </script>
   </body>
-</html>
+</htm
