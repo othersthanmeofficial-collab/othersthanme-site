@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Other Than Me</title>
-    <meta
-      name="description"
-      content="Other Than Me — metal moderno de Belo Horizonte. Ouça, assista, confira agenda e contato."
-    />
+    <meta name="description" content="Other Than Me — metal moderno de Belo Horizonte." />
     <meta name="theme-color" content="#0b0d12" />
 
     <!-- Ícones / preview -->
     <link rel="icon" href="./assets/favicon.png" />
     <meta property="og:title" content="Other Than Me" />
-    <meta property="og:description" content="Ouça e assista, confira agenda e contato." />
+    <meta property="og:description" content="Ouça agora. Assista agora." />
     <meta property="og:image" content="./assets/og.jpg" />
     <meta property="og:type" content="website" />
 
@@ -21,258 +18,66 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-    <header class="header">
-      <div class="container header__inner">
-        <a class="brand" href="#">
-          <img class="brand__logo" src="./assets/logo.png" alt="Other Than Me" />
-          <span class="brand__name">Other Than Me</span>
-        </a>
-
-        <nav class="nav" aria-label="Navegação principal">
-          <a href="#release">Lançamento</a>
-          <a href="#agenda">Agenda</a>
-          <a href="#midia">Mídia</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="header__cta">
-          <a class="btn btn--ghost" href="#presskit">Press Kit</a>
-          <a class="btn" href="#release">Ouça agora</a>
-        </div>
-      </div>
-    </header>
-
-    <main id="conteudo">
+    <main>
       <!-- HERO -->
       <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__copy">
-            <p class="badge">Metal moderno • Belo Horizonte</p>
+        <div class="hero__bg"></div>
 
-            <h1>Som pesado, moderno e clean.</h1>
+        <div class="hero__content">
+          <img class="logo" src="./assets/logo.png" alt="Other Than Me" />
 
-            <p class="lead">
-              A <strong>Other Than Me</strong> mistura peso e atmosfera pra entregar refrões grandes e energia de palco.
-              Ouça no Spotify, assista no YouTube e confira a agenda.
-            </p>
+          <h1>OTHER THAN ME</h1>
+          <p class="tagline">Modern metal from Brazil</p>
 
-            <div class="hero__buttons">
-              <a class="btn" href="#release">▶ Ouça e assista</a>
-              <a class="btn btn--ghost" href="#agenda">Ver agenda</a>
-            </div>
-
-            <div class="social">
-              <a class="chip" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
-              <a class="chip" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
-              <a class="chip" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
-              <a class="chip" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
-            </div>
-
-            <p class="meta">
-              Shows e imprensa: <a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
-            </p>
+          <!-- Redes -->
+          <div class="links">
+            <a class="btn" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank">Spotify</a>
+            <a class="btn" href="https://www.youtube.com/@OthersThanMe" target="_blank">YouTube</a>
+            <a class="btn" href="https://www.instagram.com/othersthanme/" target="_blank">Instagram</a>
+            <a class="btn" href="https://www.tiktok.com/@others.than.me" target="_blank">TikTok</a>
           </div>
 
-          <div class="hero__card">
-            <div class="card">
-              <div class="card__top">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              </div>
+          <!-- Singles / Vídeos -->
+          <div class="videos">
+            <a
+              class="video-card"
+              href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
+              target="_blank"
+            >
+              ▶ Raise Your Hands (Spotify)
+            </a>
 
-              <div class="card__body">
-                <h2 class="card__title">Último single</h2>
-                <p class="card__subtitle">“Raise Your Hands”</p>
-
-                <div class="quicklinks">
-                  <a
-                    class="btn btn--small"
-                    href="https://open.spotify.com/intl-pt/track/0pCtH5dysx40za6HesDVGF"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Spotify</a>
-
-                  <a
-                    class="btn btn--small btn--ghost"
-                    href="https://www.instagram.com/othersthanme/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Instagram</a>
-
-                  <a
-                    class="btn btn--small btn--ghost"
-                    href="https://www.youtube.com/@OthersThanMe"
-                    target="_blank"
-                    rel="noreferrer"
-                  >YouTube</a>
-                </div>
-
-                <div class="note">
-                  <strong>Raise Your Hands</strong> já disponível no Spotify.
-                </div>
-              </div>
-            </div>
-
-            <div class="hero__bg" aria-hidden="true"></div>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=UCID5LNnYxc"
+              target="_blank"
+            >
+              ▶ Doom (YouTube)
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- RELEASE -->
-      <section id="release" class="section">
-        <div class="container">
-          <div class="section__head">
-            <h2>Ouça e assista</h2>
-            <p>Single “Raise Your Hands” no Spotify e videoclipe “Doom” no YouTube.</p>
-          </div>
-
-          <div class="grid-2">
-            <article class="panel">
-              <h3>Spotify</h3>
-              <div class="embed">
-                <iframe
-                  style="border-radius: 14px"
-                  src="https://open.spotify.com/embed/track/0pCtH5dysx40za6HesDVGF?utm_source=generator"
-                  width="100%"
-                  height="152"
-                  frameborder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  title="Raise Your Hands - Other Than Me"
-                ></iframe>
-              </div>
-            </article>
-
-            <article class="panel">
-              <h3>YouTube</h3>
-              <div class="embed embed--video">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/UCID5LNnYxc"
-                  title="Doom - Other Than Me"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </article>
-          </div>
+      <!-- FOTOS -->
+      <section class="photos">
+        <div class="photos__grid">
+          <img src="./assets/photo-1.jpg" alt="Other Than Me 1" />
+          <img src="./assets/photo-2.jpg" alt="Other Than Me 2" />
+          <img src="./assets/photo-3.jpg" alt="Other Than Me 3" />
+          <img src="./assets/photo-4.jpg" alt="Other Than Me 4" />
         </div>
       </section>
 
-      <!-- AGENDA -->
-      <section id="agenda" class="section section--alt">
-        <div class="container">
-          <div class="section__head">
-            <h2>Agenda</h2>
-            <p>Próximos shows e aparições.</p>
-          </div>
-
-          <div class="table">
-            <div class="row row--head">
-              <div>Data</div>
-              <div>Cidade</div>
-              <div>Evento / Casa</div>
-              <div>Ingressos</div>
-            </div>
-
-            <div class="row">
-              <div><strong>Em breve</strong></div>
-              <div>Belo Horizonte, MG</div>
-              <div>Em breve</div>
-              <div><a class="link" href="#" target="_blank" rel="noreferrer">Ver</a></div>
-            </div>
-
-            <p class="muted">
-              Quer fechar show? <a class="link" href="#contato">Fale com a gente</a>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- MIDIA -->
-      <section id="midia" class="section">
-        <div class="container">
-          <div class="section__head">
-            <h2>Mídia</h2>
-            <p>Fotos + Press Kit.</p>
-          </div>
-
-          <!-- Galeria (lado a lado, compacta) -->
-          <div class="gallery" aria-label="Galeria de fotos da banda">
-            <figure class="gallery__item">
-              <img src="./assets/photo-1.jpg" alt="Other Than Me - foto 1" loading="lazy" />
-            </figure>
-            <figure class="gallery__item">
-              <img src="./assets/photo-2.jpg" alt="Other Than Me - foto 2" loading="lazy" />
-            </figure>
-            <figure class="gallery__item">
-              <img src="./assets/photo-3.jpg" alt="Other Than Me - foto 3" loading="lazy" />
-            </figure>
-            <figure class="gallery__item">
-              <img src="./assets/photo-4.jpg" alt="Other Than Me - foto 4" loading="lazy" />
-            </figure>
-          </div>
-
-          <div id="presskit" class="presskit">
-            <div class="presskit__text">
-              <h3>Press Kit (EPK)</h3>
-            </div>
-            <div class="presskit__actions">
-              <!-- Quando tiver o PDF, coloque em /assets/ e aponte o href, ex: ./assets/epk.pdf -->
-              <a class="btn" href="#" target="_blank" rel="noreferrer">Baixar PDF</a>
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Link do EPK</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-      <section id="contato" class="section section--alt">
-        <div class="container">
-          <div class="section__head">
-            <h2>Contato</h2>
-            <p>Shows, imprensa e parcerias.</p>
-          </div>
-
-          <div class="contact">
-            <div class="contact__card">
-              <h3>Fale direto</h3>
-              <p class="muted">Resposta rápida por e-mail ou WhatsApp.</p>
-
-              <div class="contact__list">
-                <div>
-                  <span class="label">E-mail</span>
-                  <a class="link" href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact__card">
-              <h3>Links</h3>
-              <p class="muted">Siga e acompanhe novidades.</p>
-
-              <div class="stack">
-                <a class="btn btn--ghost" href="https://www.instagram.com/othersthanme/" target="_blank" rel="noreferrer">Instagram</a>
-                <a class="btn btn--ghost" href="https://www.youtube.com/@OthersThanMe" target="_blank" rel="noreferrer">YouTube</a>
-                <a class="btn btn--ghost" href="https://open.spotify.com/intl-pt/artist/3IhWtVUAijb2B76wINGX7t" target="_blank" rel="noreferrer">Spotify</a>
-                <a class="btn btn--ghost" href="https://www.tiktok.com/@others.than.me" target="_blank" rel="noreferrer">TikTok</a>
-              </div>
-            </div>
-          </div>
-
-          <footer class="footer">
-            <p>© <span id="year"></span> Other Than Me • Belo Horizonte, MG</p>
-          </footer>
-        </div>
-      </section>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© <span id="year"></span> Other Than Me</p>
+        <p>
+          <a href="mailto:contato@othersthanme.com.br">contato@othersthanme.com.br</a>
+        </p>
+      </footer>
     </main>
 
     <script>
-      // ano
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
